@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 const EMPTY = "<EMPTY>";
 var port = process.env.PORT || 8080,
     http = require('http'),
@@ -208,7 +210,7 @@ var server = http.createServer(async function (req, res) {
 		}
 		if(url.pathname === "/api/login") {
 			// Usage: /api/login?username=your user name 
-			status = "Welcome " + url.query["username"];
+			status = "Welcome " + _.startCase(url.query["username"]);
 		}
 		if(url.pathname === "/api/invoke") {
 			// count the invokes for failed requests
