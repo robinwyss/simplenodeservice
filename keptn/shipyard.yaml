@@ -19,9 +19,9 @@ spec:
         - name: rollback
           triggeredOn:
             - event: staging.delivery.finished
-                selector:
-                  match:
-                    result: "fail"
+              selector:
+                match:
+                  result: "fail"
           tasks:
             - name: rollback
     - name: "production"
