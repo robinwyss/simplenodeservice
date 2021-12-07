@@ -4,7 +4,7 @@ kind: Service
 metadata: 
   name: simplenode
 spec: 
-  type: ClusterIP
+  type: LoadBalancer
   ports: 
   - name: http
     port: 80
