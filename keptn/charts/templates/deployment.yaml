@@ -55,10 +55,6 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.labels['app.kubernetes.io/version'] 
-        - name: DT_RELEASE_BUILD_VERSION
-          valueFrom:
-            fieldRef:
-              fieldPath: status.containerStatuses[0].imageID
         - name: DT_RELEASE_PRODUCT
           value: "{{ $keptn_project }}"  
         - name: DT_RELEASE_STAGE
