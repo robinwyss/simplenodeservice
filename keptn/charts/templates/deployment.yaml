@@ -17,7 +17,7 @@ spec:
     matchLabels:
       app: simplenode
   template:
- metadata: 
+    metadata: 
       labels:
         app: simplenode
         app.kubernetes.io/name: {{ .Values.keptn.service }}
