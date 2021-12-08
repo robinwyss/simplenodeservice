@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: simplenode
-        image: "{{ .Values.image.repository }}:{{.Values.image.tag }}"
+        image: "{{ .Values.image }}"
         imagePullPolicy: Always
         ports:
         - name: http
